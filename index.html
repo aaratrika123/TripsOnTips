@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Trips on Tips</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- font awesome cdn -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <!-- fonts -->
+        <link rel = "stylesheet" href = "font/fonts.css">
+        <!-- normalize css -->
+        <link rel = "stylesheet" href = "css/normalize.css">
+        <!-- custom css -->
+        <link rel = "stylesheet" href = "css/utility.css">
+        <link rel = "stylesheet" href = "css/style.css">
+        <link rel = "stylesheet" href = "css/responsive.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/shepherd.js@8.3.1/dist/css/shepherd.css" />
+        <!--<script type="module" src="node_modules/shepherd.js/dist/shepherd.mjs"></script> -->
+    </head>
+    <body>
+        <!-- navbar  -->
+        <nav class = "navbar">
+            <div class = "container flex">
+                <a href = "index.html" class = "site-brand">
+                    Trips<span> on Tips</span>
+                </a>
+
+                <button type = "button" id = "navbar-show-btn" class = "flex">
+                    <i class = "fas fa-bars"></i>
+                </button>
+                <div id = "navbar-collapse">
+                    <button type = "button" id = "navbar-close-btn" class = "flex">
+                        <i class = "fas fa-times"></i>
+                    </button>
+                    <ul class = "navbar-nav">
+                        <li class = "nav-item">
+                            <a href = "index.html" class = "nav-link">Home</a>
+                        </li>
+                        <li class = "nav-item">
+                            <a href = "gallery.html" class = "nav-link">Gallery</a>
+                            <a id="gallery"></a>
+
+                        
+                        </li>
+                        <li class = "nav-item">
+                            <a href = "about.html" class = "nav-link">About</a>
+                            <a id="about"></a>
+                        </li>
+                        <li class = "nav-item">
+                            <a href = "contact.html" class = "nav-link">Contact</a>
+                            <a id="contact"></a>
+                        </li>
+                        <li>
+                            <input type = "checkbox" id = "theme-toggle-btn">
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!-- end of navbar  -->
+
+        <!-- header -->
+        <header class = "flex">
+            <div class = "container">
+                <div class = "header-title">
+                    <h2 id="scroll">Welcome to Trips on Tips</h2>
+                    <h1>Venture Beyond...</h1>
+                    
+                    <p>Grab your broomsticks and portkeys, Muggles and Wizards alike! Every journey is a magical odyssey. Whether you're seeking the enchantment of far-off lands or the charm of hidden alleyways, we've got your Marauder's Map to adventure ready. Expecto your dream vacation – it's time to create some spellbinding memories!</p>
+                </div>
+                <!--
+                <div class = "header-form">
+                    <h2>Choose your Travel location:</h2>
+                    <form class = "flex">
+                        <input type = "text" class = "form-control" placeholder="Destination name">
+                        <input type="date" class = "form-control" placeholder="Date">
+                        <input type="number" class = "form-control" placeholder="Price ($)">
+                        <input type="submit" class = "btn" value = "Search">
+                    </form>
+                </div>
+                -->
+            </div>
+        </header>
+        <!-- header -->
+
+        <!-- featured section -->
+        <section id = "featured" class = "py-4">
+            <div class = "container">
+                <div class = "title-wrap">
+                    <span class = "sm-title">know about some places before your travel</span>
+                    <h2 class = "lg-title">featured places</h2>
+                </div>
+
+                <div class = "featured-row">
+                    <div class = "featured-item my-2 shadow">
+                        <img src = "images/featured-reo-de-janeiro-brazil.jpg" alt = "featured place">
+                        <div class = "featured-item-content">
+                            <span>
+                                <i class = "fas fa-map-marker-alt"></i>
+                                Reo De Janeiro, Brazil
+                            </span>
+                            <div>
+                                <p class = "text">From the iconic Copacabana to the majestic Sugarloaf Mountain, Rio offers an unforgettable blend of relaxation and adventure. Explore historic neighborhoods, dance to the rhythm of samba, and soak in the vibrant atmosphere of this coastal gem.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class = "featured-item my-2 shadow">
+                        <img src = "images/featured-north-bondi-australia.jpg" alt = "featured place">
+                        <div class = "featured-item-content">
+                            <span>
+                                <i class = "fas fa-map-marker-alt"></i>
+                                North Bondi, Australia
+                            </span>
+                            <div>
+                                <p class = "text">Enjoy panoramic views from the Bondi to Coogee Coastal Walk, dotted with cafes and vibrant street art. Dive into the waves for a thrilling surf session or simply bask in the sun's warmth. North Bondi invites you to unwind, explore, and embrace the quintessential Australian beach experience.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class = "featured-item my-2 shadow">
+                        <img src = "images/featured-berlin-germany.jpg" alt = "featured place">
+                        <div class = "featured-item-content">
+                            <span>
+                                <i class = "fas fa-map-marker-alt"></i>
+                                Berlin, Germany
+                            </span>
+                            <div>
+                                <p class = "text">A dynamic metropolis blending rich history with modern culture, known for its vibrant arts scene, iconic landmarks like the Berlin Wall, and bustling nightlife.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class = "featured-item my-2 shadow">
+                        <img src = "images/featured-khwaeng-wat-arun-thailand.jpg" alt = "featured place">
+                        <div class = "featured-item-content">
+                            <span>
+                                <i class = "fas fa-map-marker-alt"></i>
+                                Khwaeng wat arun, thailand
+                            </span>
+                            <div>
+                                <p class = "text">A mesmerizing riverside district in Bangkok, famous for the stunning Wat Arun temple, intricate architecture, and serene boat rides along the Chao Phraya River.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class = "featured-item my-2 shadow">
+                        <img src = "images/featured-rome-italy.jpg" alt = "featured place">
+                        <div class = "featured-item-content">
+                            <span>
+                                <i class = "fas fa-map-marker-alt"></i>
+                                Rome, Italy
+                            </span>
+                            <div>
+                                <p class = "text">The Eternal City, brimming with ancient wonders like the Colosseum and Vatican City, renowned for its delectable cuisine, charming piazzas, and timeless romance.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class = "featured-item my-2 shadow">
+                        <img src = "images/featured-fuvahmulah-maldives.jpg" alt = "featured place">
+                        <div class = "featured-item-content">
+                            <span>
+                                <i class = "fas fa-map-marker-alt"></i>
+                                fuvahmulah, maldives
+                            </span>
+                            <div>
+                                <p class = "text">A hidden gem in the Maldives, boasting pristine beaches, turquoise lagoons, and unique features like freshwater lakes, making it a paradise for nature lovers and adventurers alike.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- end of featured section -->
+
+        <!-- services section -->
+        <section id = "services" class = "py-4">
+            <div class = "container">
+                <div class = "title-wrap">
+                    <span class = "sm-title">know about services that we offer</span>
+                    <h2 class = "lg-title">Our services</h2>
+                </div>
+
+                <div class = "services-row">
+                    <div class = "services-item">
+                        <span class = "services-icon">
+                            <i class = "fas fa-hotel"></i>
+                        </span>
+                        <h3>Luxurious Hotel</h3>
+                        <p class = "text">Where Opulence Meets Hospitality. Experience lavish accommodations, impeccable service, and indulgent amenities, ensuring an unforgettable stay of elegance and comfort.</p>
+                        <a href = "#" class = "btn">Read more</a>
+                    </div>
+
+                    <div class = "services-item">
+                        <span class = "services-icon">
+                            <i class = "fas fa-map-marked-alt"></i>
+                        </span>
+                        <h3>Trave Guide</h3>
+                        <p class = "text">Navigate the world with expert tips, insider secrets, and curated itineraries, unlocking the best destinations and experiences for your wanderlust journey.</p>
+                        <a href = "#" class = "btn">Read more</a>
+                    </div>
+
+                    
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- end of services section -->
+
+        <!-- testimonials section -->
+        <section id = "testimonials" class = "py-4">
+            <div class = "container">
+                <div class = "title-wrap">
+                    <span class = "sm-title">what our clients say about us</span>
+                    <h2 class = "lg-title">testimonials</h2>
+                </div>
+
+                <div class = "test-row">
+                    <div class = "test-item">
+                        <p class = "text">Trips on Tips is my go-to travel companion! Their detailed guides and insider tips transformed my vacations into unforgettable adventures. From hidden gems to top attractions, they've got it all covered!</p>
+                        <div class = "test-item-info">
+                            <img src = "images/test-1.jpg" alt = "testimonial">
+                            <div>
+                                <h3>Kevin Wilson</h3>
+                                <p class = "text">Trip to Brazil</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class = "test-item">
+                        <p class = "text">Trips on Tips exceeded all my expectations! Their website is a treasure trove of travel wisdom, and their passion for exploration shines through in every recommendation. Thanks to them, I've discovered amazing destinations I never knew existed!</p>
+                        <div class = "test-item-info">
+                            <img src = "images/test-2.jpg" alt = "testimonial">
+                            <div>
+                                <h3>Ben Davis</h3>
+                                <p class = "text">Trip to Morocco</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class = "test-item">
+                        <p class = "text">I stumbled upon Trips on Tips while planning my honeymoon, and I'm so glad I did! Their personalized itineraries and recommendations made our trip seamless and magical. Can't wait to explore more destinations with their guidance!</p>
+                        <div class = "test-item-info">
+                            <img src = "images/test-3.jpg" alt = "testimonial">
+                            <div>
+                                <h3>Jaura Jones</h3>
+                                <p class = "text">Trip to Thailand</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- end of testimonials section -->
+
+        <!-- video section -->
+        <section id = "video">
+            <div class = "video-wrapper flex">
+                <video loop>
+                    <source src = "videos/video-section.mp4" type = "video/mp4">
+                </video>
+                <button type = "button" id = "play-btn">
+                    <i class = "fas fa-play"></i>
+                </button>
+            </div>
+        </section>
+        <!-- end of video section -->
+
+        <!-- footer -->
+        <footer class = "py-4">
+            <div class = "container footer-row">
+                <div class = "footer-item">
+                    <a href = "index.html" class = "site-brand">
+                        Trips<span> on Tips</span>
+                    </a>
+                    <p class = "text">Grab your broomsticks and portkeys, Muggles and Wizards alike! Every journey is a magical odyssey. Whether you're seeking the enchantment of far-off lands or the charm of hidden alleyways, we've got your Marauder's Map to adventure ready. Expecto your dream vacation – it's time to create some spellbinding memories!</p>
+                </div>
+
+                <div class = "footer-item">
+                    <h2>Follow us on: </h2>
+                    <ul class = "social-links">
+                        <li>
+                            <a href = "#">
+                                <i class = "fab fa-facebook-f"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href = "#">
+                                <i class = "fab fa-instagram"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href = "#">
+                                <i class = "fab fa-twitter"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href = "#">
+                                <i class = "fab fa-pinterest"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href = "#">
+                                <i class = "fab fa-google-plus"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class = "footer-item">
+                    <h2>Popular Places:</h2>
+                    <ul>
+                        <li><a href = "#">Thailand</a></li>
+                        <li><a href = "#">Australia</a></li>
+                        <li><a href = "#">Maldives</a></li>
+                        <li><a href = "#">Switzerland</a></li>
+                        <li><a href = "#">Germany</a></li>
+                    </ul>
+                </div>
+
+                <div class = "subscribe-form footer-item">
+                    <h2>Subscribe for Newsletter!</h2>
+                    <form class = "flex">
+                        <input type = "email" placeholder="Enter Email" class = "form-control">
+                        <input type = "submit" class = "btn" value = "Subscribe">
+                    </form>
+                </div>
+            </div>
+        </footer>
+        <!-- end of footer -->
+
+        <!-- js -->
+        <script src = "js/script.js"></script>        
+        <script>
+            // play/pause video
+            let video = document.querySelector('.video-wrapper video');
+            document.getElementById('play-btn').addEventListener('click', () => {
+                if(video.paused){
+                    video.play();
+                } else {
+                    video.pause();
+                }
+            });
+                   
+        </script>
+        <script type="module">
+            import Shepherd from './node_modules/shepherd.js/dist/shepherd.mjs';
+           
+            const tour = new Shepherd.Tour({
+           useModalOverlay: true,
+           defaultStepOptions: {
+             classes: 'shadow-md bg-purple-dark',
+             scrollTo: true
+           }
+         });
+       
+       
+       
+         tour.addStep({
+           id: 'example-step1',
+           //title: 'Welcome to Trips on Tips',
+           text: 'This is a simple tour guide app built with Shepherd.js. Let me show you around!',
+           attachTo: {
+             element: 'a.site-brand',
+             on: 'bottom'
+           },
+           //classes: 'example-step-extra-class',
+           buttons: [
+             {
+               text: 'Next',
+               action: tour.next
+             }
+           ]
+         });
+
+         tour.addStep({
+           id: 'example-step2',
+           text: 'Click on Gallery to check out some spell-binding pictures of different destinations',
+           attachTo: {
+             element: '#gallery',
+             on: 'bottom'
+           },
+           //classes: 'example-step-extra-class',
+           buttons: [
+              {                
+                text: 'Back',
+                action:tour.back
+              },
+             {
+               text: 'Next',
+               action: tour.next
+             }
+           ]
+         });
+         tour.addStep({
+           id: 'example-step3',
+           text: 'Know more about some popular places before you travel',
+           attachTo: {
+             element: 'h2.lg-title',
+             on: 'top'
+           },
+           //classes: 'example-step-extra-class',
+           buttons: [
+              {                
+                text: 'Back',
+                action:tour.back
+              },
+             {
+               text: 'Next',
+               action: tour.next
+             }
+             
+           ]
+         });        
+         tour.addStep({
+           id: 'example-step4',
+           text: 'Connect with us on our social media platforms',
+           attachTo: {
+             element: 'ul.social-links',
+             on: 'left'
+           },
+           //classes: 'example-step-extra-class',
+           buttons: [
+              {                
+                text: 'Back',
+                action:tour.back
+              },
+             {
+               text: 'Next',
+               action: tour.next
+             }
+             
+           ]
+         });
+         tour.addStep({
+           id: 'example-step5',
+           text: 'Subscribe to our newsletter to get latest updates!',
+           attachTo: {
+             element: 'form.flex',
+             on: 'top'
+           },
+           //classes: 'example-step-extra-class',
+           buttons: [
+              {                
+                text: 'Back',
+                action:tour.back
+              },
+             {
+               text: 'Next',
+               action: tour.next
+             }
+             
+           ]
+         });
+
+         tour.addStep({
+           id: 'example-step6',
+           text: 'For more assistance, check out our contact page - we would be happy to help',
+           attachTo: {
+             element: '#contact',
+             on: 'bottom'
+           },
+           //classes: 'example-step-extra-class',
+           buttons: [
+              {                
+                text: 'Back',
+                action:tour.back
+              },
+             {
+               text: 'Next',
+               action: tour.next
+             }
+           ]
+         });
+       
+         tour.addStep({
+           id: 'example-step7',
+           //title: 'Switch to Dark mode',
+           text: 'Toggle between Light mode and Dark mode as per your preference',
+           
+           attachTo: {
+             element: '#theme-toggle-btn',
+             on: 'bottom'
+           },
+           //classes: 'example-step-extra-class',
+           buttons: [
+              {                
+                text: 'Back',
+                action:tour.back
+              },
+             {
+               text: 'Got it!',
+               action: tour.next
+             }
+             
+           ]
+         });  
+         tour.addStep({
+           id: 'example-step8',
+           //title: 'Switch to Dark mode',
+           text: 'Scroll through!',
+           
+           attachTo: {
+             element: '#scroll',
+             on: 'top'
+           },
+           //classes: 'example-step-extra-class',
+           buttons: [
+              
+             {
+               text: 'Finish!',
+               action: tour.next
+             }
+             
+           ]
+         });    
+             
+              
+       tour.start();
+       
+           </script>
+    </body>
+</html>
